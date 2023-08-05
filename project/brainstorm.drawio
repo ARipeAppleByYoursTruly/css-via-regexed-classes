@@ -1,0 +1,196 @@
+<mxfile host="65bd71144e">
+    <diagram id="x08ugheSv0ZatPznFa_V" name="General Process">
+        <mxGraphModel dx="541" dy="385" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Process Flowchart" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=22;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="3" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="3" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Read files in codebase" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="4" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="4" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Extract class names from files" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;strokeWidth=2;fontSize=18;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="120" y="440" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="5" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Generate styles based on class names" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="6" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="6" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Sort generated styles" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="7" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontSize=18;" parent="1" source="7" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Save sorted styles to a .css file" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;fontSize=18;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="210" y="170" as="sourcePoint"/>
+                        <mxPoint x="240" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="Documentation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=22;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="40" y="560" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Requirements" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="40" y="640" width="160" height="80" as="geometry">
+                        <mxRectangle x="40" y="640" width="160" height="240" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="Node.js&lt;br&gt;&lt;br&gt;npm packages:&lt;br&gt;- fast-glob&lt;br&gt;- cssesc&lt;br&gt;- @iconify/utils&lt;br&gt;- @iconify/json" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="54" vertex="1">
+                    <mxGeometry y="80" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Configurable Stuffs" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="440" y="640" width="160" height="80" as="geometry">
+                        <mxRectangle x="440" y="640" width="440" height="480" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="line 18 - const files - Defines the glob patterns to grab specific files&lt;br&gt;&lt;br&gt;line 193 - const shortcuts - Defines shortcuts to set multiple rules with just one class name&lt;br&gt;&lt;br&gt;line 321 to 358 - each logical section of code - Defines the rules to generate CSS styles&lt;br&gt;&lt;br&gt;line 374 - const layers - Defines layers and their order for sorting the generated CSS styles&lt;br&gt;&lt;br&gt;line 411 to 423 - each if statement - Defines special sorting cases to amend issues caused by the default sorting behavior when sorting by selectors&lt;br&gt;&lt;br&gt;line 435 - const outputFilePath - Defines the filepath to write the sorted CSS styles to" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="57" vertex="1">
+                    <mxGeometry y="80" width="440" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Installation" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="240" y="640" width="160" height="80" as="geometry">
+                        <mxRectangle x="240" y="640" width="400" height="400" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="Set up your project like you normally would&lt;br&gt;&lt;br&gt;Install npm packages specified in Requirements&lt;br&gt;&lt;br&gt;Extract to &amp;lt;project root&amp;gt;/&amp;lt;new folder&amp;gt;&lt;br&gt;&lt;br&gt;Modify package.json:&lt;br&gt;- Define a new command with the value &quot;node ./&amp;lt;new folder&amp;gt;/&amp;lt;no name yet&amp;gt;.css&quot;&lt;br&gt;&lt;br&gt;- Define new &quot;pre&quot; commands with the value &quot;npm run &amp;lt;new command&amp;gt;&quot; so that the CSS will be generated first before building your project" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="59" vertex="1">
+                    <mxGeometry y="80" width="400" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Configurable?" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="1000" y="360" width="160" height="80" as="geometry">
+                        <mxRectangle x="1000" y="360" width="160" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="No" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="49" vertex="1">
+                    <mxGeometry y="80" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Configurable?" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="760" y="360" width="160" height="80" as="geometry">
+                        <mxRectangle x="760" y="360" width="280" height="240" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="Yes&lt;br&gt;&lt;br&gt;Layers array in the object&lt;br&gt;&lt;br&gt;But special case sorting requires writing the logic yourself" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="43" vertex="1">
+                    <mxGeometry y="80" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Configurable?" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="520" y="360" width="160" height="80" as="geometry">
+                        <mxRectangle x="520" y="360" width="200" height="240" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="Yes&lt;br&gt;&lt;br&gt;Shortcuts, rules&lt;br&gt;&lt;br&gt;As for variants, it looks like you have to write the logic yourself" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="34" vertex="1">
+                    <mxGeometry y="80" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Configurable?" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="280" y="360" width="160" height="80" as="geometry">
+                        <mxRectangle x="280" y="360" width="160" height="200" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="No&lt;br&gt;&lt;br&gt;Basically need to write your own extraction logic" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="25" vertex="1">
+                    <mxGeometry y="80" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Configurable?" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="40" y="360" width="160" height="80" as="geometry">
+                        <mxRectangle x="40" y="360" width="160" height="170" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="Yes&lt;br&gt;&lt;br&gt;Glob patterns" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="23" vertex="1">
+                    <mxGeometry y="80" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Process" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="1000" y="240" width="160" height="80" as="geometry">
+                        <mxRectangle x="1000" y="480" width="360" height="440" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="Create a new string&lt;br&gt;&lt;br&gt;Then for each layer array, add a CSS comment for the layer to the string&lt;br&gt;&lt;br&gt;Then for each rule in layer array&lt;br&gt;&lt;br&gt;if isShortcut is true, build merged selectors (by checking current selector with the next selector)&lt;br&gt;&lt;br&gt;if false, build selectors individually&lt;br&gt;&lt;br&gt;Finally, write the fully built string to a file&lt;br&gt;&lt;br&gt;(Used a file stream instead)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="46" vertex="1">
+                    <mxGeometry y="80" width="360" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Process" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="760" y="240" width="160" height="80" as="geometry">
+                        <mxRectangle x="760" y="240" width="400" height="440" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="There will be 2 sorts, first by layers, then by selector length (to handle variant specificity)&lt;br&gt;&lt;br&gt;Define an object of arrays of strings containing the order of layers, from top to bottom, each property is set to an empty array&lt;br&gt;&lt;br&gt;Then check the layer property of each object, if it matches, push it into the array&lt;br&gt;&lt;br&gt;Then sort the each layer array by extracting a part of the selector and counting its length, it should not extract the pseudos&lt;br&gt;(Not sure if this is a good way to sort by variants)&lt;br&gt;(Decided to use localeCompare(), then sort again but it handles special cases)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="40" vertex="1">
+                    <mxGeometry y="80" width="400" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Process" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="520" y="240" width="160" height="80" as="geometry">
+                        <mxRectangle x="520" y="240" width="840" height="1560" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="The extracted class names can be either a shortcut or a rule&lt;br&gt;&lt;br&gt;A shortcut is a replacement of writing a bunch of rules&lt;br&gt;A rule is what decides the style to generate&lt;br&gt;&lt;br&gt;So need to check for shortcuts first, before checking for rules&lt;br&gt;&lt;br&gt;Start by making an array for storing objects with these properties:&lt;br&gt;- className - It's the same one from extracted class names&lt;br&gt;- isShortcut - A flag&lt;br&gt;- layer - Used to sort the styles by layers&lt;br&gt;- rules - An array of strings, used by shortcuts to populate the rules it replaces, rules by themselves are simply copied into it&lt;br&gt;- variantTransformations - An array of arrays of functions, used in storing variant transformations, to be applied to rules when generating style (wait, this feels not needed)&lt;br&gt;- generatedStyles - An array of objects with selector and body properties, done so to allow style merging&lt;br&gt;&lt;br&gt;Then define an object of shortcut definitions, key is the shortcut, value is the rules it replaces&lt;br&gt;&lt;br&gt;Then for each class name, check if it matches a shortcut, then add the value to the rules property of the object, then set layer property&lt;br&gt;&lt;br&gt;Now every class has an array of rules, this array will be used to generate styles&lt;br&gt;&lt;br&gt;But rules might contain variants, to apply combinators and pseudos&lt;br&gt;&lt;br&gt;In order to handle this, a formal syntax of the rule is required, this is what I came up with:&lt;br&gt;&amp;lt;variant(s)&amp;gt;?&amp;lt;rule&amp;gt;&lt;br&gt;&lt;br&gt;Which means for each rule, need to check for variants first, before the rule itself&lt;br&gt;&lt;br&gt;Variants:&lt;br&gt;_ - Descendant combinator&lt;br&gt;~ - Sibling combinator&lt;br&gt;&amp;gt; - Child combinator&lt;br&gt;+ - Adjacent combinator&lt;br&gt;| - Namespace combinator&lt;br&gt;: - Pseudo-class&lt;br&gt;:: - Pseudo-element&lt;br&gt;&lt;br&gt;Not sure about ID, class, and attibute selectors&lt;br&gt;&lt;br&gt;Start by extract the variants portion&lt;br&gt;&lt;br&gt;If it's not empty, proceed to check the portion&lt;br&gt;&lt;br&gt;If portion starts with &amp;lt;insert variant representation character&amp;gt;, then add the &amp;lt;appropriate vairant transformation&amp;gt; to the array, remove the matched variant from the portion, then recheck portion&lt;br&gt;&lt;br&gt;The array should be empty if the rule has no variants&lt;br&gt;&lt;br&gt;(This can be remade to create, escape and store to the selector property)&lt;br&gt;&lt;br&gt;Finally, now is the time to check each rule in the rule array of each object&lt;br&gt;&lt;br&gt;There's 2 rule that I'm using&lt;br&gt;- icon_&amp;lt;collection-name&amp;gt;_&amp;lt;icon-name&amp;gt; - This is for using Iconify's pure CSS icons&lt;br&gt;- &amp;lt;property-name&amp;gt;:&amp;lt;value_or_values&amp;gt; - Almost identical to CSS' syntax, but spaces in &amp;lt;value_or_values&amp;gt; are replaced with underscores&lt;br&gt;&lt;br&gt;Rules are placed from more specific to more generic&lt;br&gt;&lt;br&gt;If the rule match a rule syntax, perform the rule syntax's operation, then apply variants, then add to style property of object, then set the layer property if isShortcut is false&lt;br&gt;&lt;br&gt;(This can be remade to just perform the rule syntax's operation and store to the body property, then set the layer property)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="29" vertex="1">
+                    <mxGeometry y="80" width="840" height="1480" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Process" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="280" y="240" width="160" height="80" as="geometry">
+                        <mxRectangle x="280" y="240" width="400" height="440" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="Match starting HTML tags in file&lt;br&gt;&lt;br&gt;Then match for the class attribute in the tag&lt;br&gt;&lt;br&gt;Then check what wraps the value of class attribute&lt;br&gt;&lt;br&gt;If {}, match for ``, '' and &quot;&quot;, then extract space-seperated class names in '' and &quot;&quot;, then recheck ``&lt;br&gt;&lt;br&gt;If ``, match for {}, extract space-seperated class names in ``, then recheck {}&lt;br&gt;&lt;br&gt;If '' or &quot;&quot;, extract space-seperated class names in '' or &quot;&quot;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="22" vertex="1">
+                    <mxGeometry y="80" width="400" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Process" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="40" y="240" width="160" height="80" as="geometry">
+                        <mxRectangle x="40" y="480" width="200" height="200" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="Define glob patterns&lt;br&gt;&lt;br&gt;Then glob the files&lt;br&gt;&lt;br&gt;Then read the files" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="31" vertex="1">
+                    <mxGeometry y="80" width="200" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="sbc64DdEYKdtM9Afcf2m" name="Archived">
+        <mxGraphModel dx="982" dy="602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="0h5pCzQgbhbjylbBB7HQ-1" value="&lt;div style=&quot;color: rgb(204, 204, 204); background-color: rgb(31, 31, 31); font-family: &amp;quot;Cascadia Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Generate styles based on the extracted class names&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// ===&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Each regex has implied specificity&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// The more specific regex should be placed higher on the if else if chain&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Note: strings are treated as regex by string.match()&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Need to figure out:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Shortcuts - replace the shortcut with class names in extractedClassNames beforehand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Layers - Ganerate an object to store information of the style generated&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Variants - Combinators, pseudo-classes, and pseudo-elements&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Merging? - This makes more sense with shortcuts&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Sorting the generated styles - Sort by layers first, then what?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Maybe count the number of variants in the style and sort based on that?&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Add support for Iconify&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="200" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
