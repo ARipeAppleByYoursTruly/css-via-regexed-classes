@@ -23,7 +23,7 @@ export default function generateCSS(): AstroIntegration {
     hooks: {
       "astro:server:setup": ({ server }) => {
         server.watcher.on("change", (path) => {
-          // The generatede CSS file by css-via-regexed-classes.js
+          // The generated CSS file by css-via-regexed-classes.js
           // To prevent infinite loop
           if (path.endsWith("generated-via-regexed-classes.css")){
             return
