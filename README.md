@@ -77,6 +77,30 @@ Imagine you have a button with the classes `:hover?color:red` and `:active?color
 
 
 
+### Astro Plugin Setup
+
+This Astro plugin enables the CSS file to be auto-regenerated whenever a file has changed when running in dev server, so you don't have to manually restart the dev server. But the reload time will be increased because Astro has to reload a second time to update the generated CSS file.
+
+1.  Download `astro-plugin.ts` and place it preferably in the same folder as the script
+2.  You can directly modify the file to:
+    -   Change the filename that refer to the script
+    -   Specify the file extensions of the file changed to trigger the script
+3.  Modify your `astro.config.mjs` like so:
+    ```js
+    // ...
+    import generateCSS from "filepath to astro-plugin.ts"
+    // ...
+    export default defineConfig({
+      integrations: [
+        // ...
+        generateCSS()
+        // ...
+      ]
+    })
+    ```
+
+
+
 ## Default Behavior out of the Box
 
 ### Class Name Extraction Logic
