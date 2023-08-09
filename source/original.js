@@ -163,6 +163,8 @@ files.forEach(file => {
   })
 })
 
+extractedClassNames = Array.from(new Set(extractedClassNames))
+
 console.log("Done")
 
 
@@ -350,7 +352,7 @@ stylingObjects.forEach(stylingObject => {
         iconifyCSS.indexOf("}")
       )
 
-      stylingObject.generatedStyles[index].body = `  ${iconifyCSSBody.trim()}`
+      stylingObject.generatedStyles[index].body = `${iconifyCSSBody.trim()}`
 
       if (stylingObject.layer === "") {
         stylingObject.layer = "icons"
@@ -366,7 +368,7 @@ stylingObjects.forEach(stylingObject => {
     if (ruleMatch !== null) {
       const CSSValue = ruleMatch[2].replaceAll("_", " ")
 
-      stylingObject.generatedStyles[index].body = `  ${ruleMatch[1]}: ${CSSValue};`
+      stylingObject.generatedStyles[index].body = `${ruleMatch[1]}: ${CSSValue};`
 
       if (stylingObject.layer === "") {
         stylingObject.layer = "atomics"
@@ -468,37 +470,39 @@ for (const layer in styleSheetObject) {
 
 
 
-  if (layer !== "shortcuts") {
-    styleSheetObject[layer].forEach((style) => {
-      outputFileStream.write(`\n${style.selector} {\n${style.body}\n}\n`)
-    })
+  // To disable merging, comment out this entire logical section of code
+  if (layer === "shortcuts") {
+    let i = 0
+    let selector = styleSheetObject[layer][0].selector
+    let body = styleSheetObject[layer][0].body
 
-    continue
+    while (true) {
+      if (i >= styleSheetObject[layer].length - 1) {
+        outputFileStream.write(`\n${selector} {\n  ${body}\n}\n`)
+
+        break
+      }
+
+      if (selector === styleSheetObject[layer][i + 1].selector) {
+        body += `\n  ${styleSheetObject[layer][i + 1].body}`
+      }
+      else {
+        outputFileStream.write(`\n${selector} {\n  ${body}\n}\n`)
+
+        selector = styleSheetObject[layer][i + 1].selector
+        body = styleSheetObject[layer][i + 1].body
+      }
+
+      i++
+    }
   }
 
-  // Merge shortcut rules
-  let i = 0
-  let selector = styleSheetObject[layer][0].selector
-  let body = styleSheetObject[layer][0].body
 
-  while (true) {
-    if (i >= styleSheetObject[layer].length - 1) {
-      outputFileStream.write(`\n${selector} {\n${body}\n}\n`)
 
-      break
-    }
-
-    if (selector === styleSheetObject[layer][i + 1].selector) {
-      body += `\n${styleSheetObject[layer][i + 1].body}`
-    }
-    else {
-      outputFileStream.write(`\n${selector} {\n${body}\n}\n`)
-
-      selector = styleSheetObject[layer][i + 1].selector
-      body = styleSheetObject[layer][i + 1].body
-    }
-
-    i++
+  else {
+    styleSheetObject[layer].forEach((style) => {
+      outputFileStream.write(`\n${style.selector} {\n  ${style.body}\n}\n`)
+    })
   }
 }
 
