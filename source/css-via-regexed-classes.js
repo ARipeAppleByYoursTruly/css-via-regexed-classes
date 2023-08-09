@@ -48,7 +48,7 @@ files.forEach(file => {
 
   // This regex only matches the starting HTML tags
   // This also matches "if (a < b || a > c) {", but will be discarded by const classAttribute
-  const htmlTags = fileContent.match(/<(?!\/)[^>]+(?:>|\/>)/g)
+  const htmlTags = fileContent.match(/<(?!\/)[^<]+(?:>|\/>)/g)
 
   if (htmlTags === null) {
     return

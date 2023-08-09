@@ -23,7 +23,7 @@ const files = fg.sync([
 files.forEach(file => {
   const fileContent = fs.readFileSync(file, "utf-8")
 
-  const htmlTags = fileContent.match(/<(?!\/)[^>]+(?:>|\/>)/g)
+  const htmlTags = fileContent.match(/<(?!\/)[^<]+(?:>|\/>)/g)
 
   if (htmlTags === null) {
     return
