@@ -59,7 +59,7 @@ files.forEach(file => {
     const singleLineHtmlTag = htmlTag.replaceAll(/\s+/g, " ")
 
     // Note: Solid also has the classList attribute, so need to deal with that eventually
-    const classAttribute = singleLineHtmlTag.match(/class=('.+'|".+"|{.+})/)
+    const classAttribute = singleLineHtmlTag.match(/class=('[^']+'|"[^"]+"|{[^}]+})/)
 
     if (classAttribute === null) {
       return
