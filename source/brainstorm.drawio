@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="x08ugheSv0ZatPznFa_V" name="General Process">
-        <mxGraphModel dx="541" dy="385" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+        <mxGraphModel dx="982" dy="602" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -178,6 +178,18 @@
                 </mxCell>
                 <mxCell id="32" value="Define glob patterns&lt;br&gt;&lt;br&gt;Then glob the files&lt;br&gt;&lt;br&gt;Then read the files" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="31" vertex="1">
                     <mxGeometry y="80" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="Improvements in v2" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=22;fontStyle=4" vertex="1" parent="1">
+                    <mxGeometry x="40" y="840" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="- Handle variants on shortcuts&lt;br&gt;- Write shortcuts in shortcuts' definition&lt;br&gt;&lt;br&gt;- Won't be handling media queries and other at-rules because it can be done with layers and writing your own write to file logic" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="920" width="320" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="Logic for extracting class names stays the same, I only refactored it to make it easier to add your own logic, in case there's a need to match classList from React or SolidJS" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="1160" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbyWl4ZqXJbP8VXSH28s-65" value="Need to rethink how to process class name&lt;br&gt;&lt;br&gt;Currently the syntax will be&lt;br&gt;&amp;lt;variant(s)&amp;gt;?&amp;lt;shortcut/rule&amp;gt;&lt;br&gt;&lt;br&gt;So the order of process will be&lt;br&gt;variants -&amp;gt; shortcuts -&amp;gt; rules" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="1160" width="440" height="400" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
