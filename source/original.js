@@ -193,11 +193,28 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
   let obj = createStylingObject()
   obj.className = extractedClassName
 
-  let shortcutMatch = ""
+
+
+  // Store variants
+  let variants = extractedClassName.match(/^(.+)\?(.+)$/)
+  let shortcutOrRule
+
+  if (variants !== null) {
+    shortcutOrRule = variants[2]
+    variants = variants[1]
+  }
+  else {
+    shortcutOrRule = extractedClassName
+    variants = ""
+  }
 
 
 
-  shortcutMatch = extractedClassName.match(/^Aa-button-icon$/)
+  let shortcutMatch = /^$/
+
+
+
+  shortcutMatch = shortcutOrRule.match(/^Aa-button-icon$/)
 
   if (shortcutMatch !== null) {
     obj.isShortcut = true
@@ -209,12 +226,23 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
       ">div:active?color:purple"
     ]
 
+    if (variants !== "") {
+      obj.rules = obj.rules.map((rule) => {
+        if (rule.indexOf("?") >= 0) {
+          return `${variants}${rule}`
+        }
+        else {
+          return `${variants}?${rule}`
+        }
+      })
+    }
+
     return obj
   }
 
 
 
-  shortcutMatch = extractedClassName.match(/^devonly-bg-on-all:(.+)$/)
+  shortcutMatch = shortcutOrRule.match(/^devonly-bg-on-all:(.+)$/)
 
   if (shortcutMatch !== null) {
     obj.isShortcut = true
@@ -223,6 +251,17 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
       `background-color:${shortcutMatch[1]}`,
       `_*?background-color:${shortcutMatch[1]}`
     ]
+
+    if (variants !== "") {
+      obj.rules = obj.rules.map((rule) => {
+        if (rule.indexOf("?") >= 0) {
+          return `${variants}${rule}`
+        }
+        else {
+          return `${variants}?${rule}`
+        }
+      })
+    }
 
     return obj
   }

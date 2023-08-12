@@ -219,7 +219,24 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
   let obj = createStylingObject()
   obj.className = extractedClassName
 
-  let shortcutMatch = ""
+
+
+  // Store variants
+  let variants = extractedClassName.match(/^(.+)\?(.+)$/)
+  let shortcutOrRule
+
+  if (variants !== null) {
+    shortcutOrRule = variants[2]
+    variants = variants[1]
+  }
+  else {
+    shortcutOrRule = extractedClassName
+    variants = ""
+  }
+
+
+
+  let shortcutMatch = /^$/
 
 
 
@@ -227,7 +244,7 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
 
   // Template
   /*
-  shortcutMatch = extractedClassName.match(/your shortcut regex here/)
+  shortcutMatch = shortcutOrRule.match(/your shortcut regex here/)
 
   if (shortcutMatch !== null) {
     obj.isShortcut = true
@@ -235,6 +252,17 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
     obj.rules = [
       // Your rules here
     ]
+
+    if (variants !== "") {
+      obj.rules = obj.rules.map((rule) => {
+        if (rule.indexOf("?") >= 0) {
+          return `${variants}${rule}`
+        }
+        else {
+          return `${variants}?${rule}`
+        }
+      })
+    }
 
     return obj
   }
@@ -252,6 +280,17 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
       ">div:active?color:purple"
     ]
 
+    if (variants !== "") {
+      obj.rules = obj.rules.map((rule) => {
+        if (rule.indexOf("?") >= 0) {
+          return `${variants}${rule}`
+        }
+        else {
+          return `${variants}?${rule}`
+        }
+      })
+    }
+
     return obj
   }
 
@@ -266,6 +305,17 @@ stylingObjects = extractedClassNames.map(extractedClassName => {
       `background-color:${shortcutMatch[1]}`,
       `_*?background-color:${shortcutMatch[1]}`
     ]
+
+    if (variants !== "") {
+      obj.rules = obj.rules.map((rule) => {
+        if (rule.indexOf("?") >= 0) {
+          return `${variants}${rule}`
+        }
+        else {
+          return `${variants}?${rule}`
+        }
+      })
+    }
 
     return obj
   }

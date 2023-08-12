@@ -16,6 +16,8 @@ Because UnoCSS didn't provide a way to alter the order of generated styles.
 
 Imagine you have a button with the classes `:hover?color:red` and `:active?color:green` (I believe it's obvious what styles they apply). Logically, `:hover?color:red` should be placed before `:active?color:green` in the CSS file, but `a` comes before `h`, so UnoCSS places `:active?color:green` before `:hover?color:red`, and now you got a visual bug of the button having no onClicked state even though it functions correctly.
 
+>   Note: I've only realized after writing that `:hover` itself is problematic on touchscreen devices
+
 
 
 ## How to use this?
@@ -124,11 +126,15 @@ Example usage: `>div:hover?color:red` - There are 2 variants here, `><target>` a
 
 Current variants:
 -   `_<target>` - Descendent combinator, from `button div`
--   `~<target>` - Sibling combinator, from `button ~ div`
 -   `><target>` - Child combinator, from `button > div`
--   `+<target>` - Adjacent combinator, from `button + div`
+-   `~<target>` - General sibling combinator, from `button ~ div`
+-   `+<target>` - Adjacent sibling combinator, from `button + div`
 -   `:<target>` - Pseudo-class selector, from `button:hover`
 -   `::<target>` - Pseudo-element selector, from `button::before`
+
+>   v2.0.0 - Variants can also be handled in shortcuts
+
+>   Note: At-rules can be done by adding a new layer and the write to file logic
 
 
 
@@ -136,6 +142,7 @@ Current variants:
 
 -   `icon_<collection-name>_<icon-name>` - To use pure CSS icons from Iconify, example: `icon_material-symbols_light-mode`
 -   `<css-property>:<value_with_or_without_spaces>` - The rule that basically enables writing CSS in the `class` attribute, example: `margin:10px_10px_0`, `background-color:var(--background)`
+
     Please remember that "` `" seperates classes, so values that requires "` `" to work need to use "`_`" instead
 
 
