@@ -3,20 +3,6 @@ import child_process from "node:child_process"
 
 
 
-// To use this plugin, modify your astro.config.mjs like so:
-/*
-// ...
-import generateCSS from "filepath to astro-plugin.ts"
-// ...
-export default defineConfig({
-  integrations: [
-    // ...
-    generateCSS()
-    // ...
-  ]
-})
-*/
-
 export default function generateCSS(): AstroIntegration {
   return {
     name: "generate-css-via-regexed-classes",
@@ -30,7 +16,13 @@ export default function generateCSS(): AstroIntegration {
           }
 
           // Only generate CSS if specific files are changed
-          if (path.endsWith(".astro") || path.endsWith(".tsx")) {
+          if (
+            // For updating shortcuts
+            path.endsWith("css-via-regexed-classes.js") ||
+
+            path.endsWith(".astro") ||
+            path.endsWith(".tsx")
+          ) {
             // Replace "generate-css" with your command defined in package.json
             child_process.exec("npm run generate-css")
           }

@@ -1,109 +1,103 @@
 # CSS via Regex-ed Classes
 
-## What is this?
-
-Heavily inspired by UnoCSS, this is a script that extract class names from a project and generates a CSS file with styles as specified by rules, variants, shortcuts, and layers defined by the developer.
-
-In actuality, this is a less advanced and less flexible version of UnoCSS. Like, it's not even a `npm` package, it's just one script, and you need to manually set it up. If you're satisfied in using Tailwind CSS, UnoCSS, or any other CSS frameworks and language supercedes, then don't use this.
-
-To deter you even further from using this script, you have to modify the script itself if you want to change its behaviour, though I did try so make some stuff "configurable". A considerable amount of technical prowess is required, but at least it doesn't involve having 10 years experience in Vite plugin and `npm` package development. What an agonizing experience that was.
 
 
+## What is This?
 
-## Then why does this exists?
+This is a script that generates a CSS file with styles based on the class names used in your codebase.
 
-Because UnoCSS didn't provide a way to alter the order of generated styles.
+Heavily inspired by UnoCSS, you can define your own rules, shortcuts, variants, and layers. But on top of that, you can modify many sections of the script to suit your needs, because it's a **script**, not a `npm` package.
 
-Imagine you have a button with the classes `:hover?color:red` and `:active?color:green` (I believe it's obvious what styles they apply). Logically, `:hover?color:red` should be placed before `:active?color:green` in the CSS file, but `a` comes before `h`, so UnoCSS places `:active?color:green` before `:hover?color:red`, and now you got a visual bug of the button having no onClicked state even though it functions correctly.
+By default, it uses the "vanilla CSS as class names" set of rules and variants, and a rule to use Iconify's pure CSS icons. You'll need to manually set up this script in order to use it properly.
 
->   Note: I've only realized after writing that `:hover` itself is problematic on touchscreen devices
+But to be honest, I discourage you to use this, because it's not professionally made. Go and use Taillwind CSS, UnoCSS, or any other CSS frameworks and language supercedes instead.
 
 
 
-## How to use this?
+## Why Does This Exist?
+
+This whole thing started when I was finding a CSS framework to use in my projects, because I thought, if Astro is like a better HTML, and SolidJS is like a better Javascript, then I'm missing something that is like a better CSS.
+
+First I tried Tailwind CSS due to its popularity, but I dropped it very quickly due to its naming convention. I felt like I'm trying to learn CSS all over again.
+
+Then I tried UnoCSS, and I liked it very much because I can customize it to use vanilla CSS syntax as the class names. I customized it so much that I've reached a bottleneck of trying to customize something that UnoCSS doesn't provide a way for.
+
+And that's when I've decided to make my own CSS "framework".
+
+
+
+## How to Use This?
 
 ### Requirements
 
 -   Node.js
--   `npm` packages: (`npm i -D <package>`)
-    -   fast-glob
-    -   cssesc
-    -   @iconify/utils (optional)
-    -   @iconify/json (optional)
+-   `npm` packages: (`npm i -D ...`)
+    -   `fast-glob`
+    -   `cssesc`
+    -   If you want to use Iconify icons:
+        -   `@iconify/utils`
+        -   `@iconify/json`
 
 
 
 ### Setup
 
-1.  Place the script somewhere in the project that won't get included in production
-2.  In `packge.json`, add a new key-value pair in `scripts`
-    ```json
-    // ...
+1.  Download `css-via-regexed-classes.js` and place it somewhere in the project that won't get included when building your project
+2.  In `package.json`, add a new key-value pair in `scripts`
+    ```jsonc
     "scripts": {
-      // ...
-      "<unique command name>": "node ./<path to the script from project root>"
-      // Example: "generateCSS": "node ./tools/css-via-regexed-classes.js"
-
-      // ...
+      "<unique command name>": "node <path to the script>"
+      // Example
+      // "generate-css": "node generate-css/css-via-regexed-classes.js"
     }
     ```
-
-3.  Add new "pre-" command key-value pairs to `scripts` to commands that will build or run your project
-    ```json
-    // Example: For Astro projects, add "predev" and "prebuild" key-value pairs to "scripts"
-
-    // ...
+3.  Add new `pre<command>` key-value pairs to `scripts` to commands that will build or run your project
+    ```jsonc
+    // Example: For Astro projects, add "predev" and "prebuild" key-value pairs
     "scripts": {
-      // ...
-      "predev": "npm run <unique command name>",
+      // Replace generate-css with your <unique command name>
+      "predev": "npm run generate-css",
       "dev": "astro dev",
-      // ...
-      "prebuild": "npm run <unique command name>",
-      "build": "astro build",
-      // ...
+
+      "prebuild": "npm run generate-css",
+      "build": "astro build"
     }
     ```
-
-4.  Since this is just a script, you can modify the code directly to:
-    -   Add glob patterns to specify the files to perform class name extraction on
+4.  Modify the script to:
+    -   Add glob patterns that specify the files to extract class names form
     -   Modify the default class name extraction logic `(advanced)`
     -   Add shortcuts
-    -   Modify the default variant handling logic `(advanced)`
-    -   Add rules (and/or not use Iconify icons)
+    -   Modify the default variant handling logic `(slightly advanced)`
+    -   Add rules
     -   Add layers
-    -   Alter the final order of the generated styles to handle special cases `(slightly advanced)`
-    -   Enable or disable style merging for shortcuts
-    -   Specify the filepath of the output CSS file
-
-5.  Finally, to use the generated styles, import the CSS file to your webpages
+    -   Add special sorting cases `(advanced)`
+    -   Modify the filepath of the CSS file output
+5.  Import the output CSS file to your webpages
 
 
 
 ### Astro Plugin Setup
 
-This Astro plugin enables the CSS file to be auto-regenerated whenever a file has changed when running in dev server, so you don't have to manually restart the dev server. But the reload time will be increased because Astro has to reload a second time to update the generated CSS file.
+This plugin enables the script to be run automatically whenever a detected file has been updated, but you'll have to wait a little longer for the output CSS file to update.
 
 1.  Download `astro-plugin.ts` and place it preferably in the same folder as the script
-2.  You can directly modify the file to:
-    -   Change the filename that refer to the script
-    -   Specify the file extensions of the file changed to trigger the script
-3.  Modify your `astro.config.mjs` like so:
+2.  Modify your `astro.config.mjs` like so:
     ```js
-    // ...
-    import generateCSS from "filepath to astro-plugin.ts"
+    import generateCSS from "file to the plugin"
     // ...
     export default defineConfig({
       integrations: [
-        // ...
         generateCSS()
-        // ...
       ]
     })
     ```
+3.  Modify the plugin to:
+    -   Change the file name that refer to the script
+    -   Specify the file extensions of the fil changed to trigger the script
 
 
 
-## Default Behavior out of the Box
+## Default Behavior Out of the Box
 
 ### Class Name Extraction Logic
 
@@ -116,9 +110,15 @@ The way to extract class names depends on the characters used to wrap the value:
 
 
 
+### Shortcuts
+
+All shortcuts will be converted to their rules before going to the next step. This also applies to shortcuts in shortcuts.
+
+
+
 ### Variants
 
-Variants serve as ways to handle CSS' combinators and pseudo selectors, other stuff like at-rules aren't implemented as of now.
+Variants serve as ways to handle CSS' combinators and pseudo selectors, in both rules and shortcuts.
 
 Syntax: `<variant(s)>?<rule>`
 
@@ -131,10 +131,6 @@ Current variants:
 -   `+<target>` - Adjacent sibling combinator, from `button + div`
 -   `:<target>` - Pseudo-class selector, from `button:hover`
 -   `::<target>` - Pseudo-element selector, from `button::before`
-
->   v2.0.0 - Variants can also be handled in shortcuts
-
->   Note: At-rules can be done by adding a new layer and the write to file logic
 
 
 
@@ -155,17 +151,9 @@ Layers, in order from lowest priority to highest:
 -   `shortcuts`
 -   `atomics`
 
-Then, in every layer, each generated style will be sorted via JavaScript's `localeCompare()`.
+Then, in every layer, each generated style will be sorted by their selector via JavaScript's `localeCompare()`.
 
 The logic will check the sorted styles again, to handle special cases. I've only implemented one special case of sorting `:hover` before `:active`.
-
-
-
-### Style Merging Logic
-
-Enabled by default, the logic will first check if it's currently writing styles in the `shortcuts` layer.
-
-Then it will check the style's selector of current index and next index. If both selectors are identical, add the latter's body to the current's body. Otherwise, write the style with the now merged body into the file.
 
 
 
@@ -185,4 +173,4 @@ I thought I'm niche enough already, but apparently, I can be even more niche, us
 
 Also, I owe Anthony Fu and the UnoCSS team a big thank you for doing many parts of the brainstorming process. I wouldn't even have the idea of making this script if it weren't for UnoCSS' existence. I borrowed a lot of ideas from it.
 
-Thank you for your time in reading this README.
+Thank you for checking out CSS via Regexed Classes.

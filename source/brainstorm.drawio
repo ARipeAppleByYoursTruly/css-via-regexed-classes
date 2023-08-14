@@ -1,6 +1,55 @@
 <mxfile host="65bd71144e">
-    <diagram id="x08ugheSv0ZatPznFa_V" name="General Process">
-        <mxGraphModel dx="1228" dy="753" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+    <diagram id="4_Febr7LZCW1ciUzTyBA" name="v2">
+        <mxGraphModel dx="982" dy="602" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="an_UoW8F_H9EfBwdVA4y-1" value="Improvements" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=22;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5iLo7T8r3KrbxRlgxGcq-2" value="- Shortcuts in shortcuts&lt;br&gt;- layer per rule" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="1VtPH8iflWAOOX-ZFy6h-3" value="Changes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=22;fontStyle=4" parent="1" vertex="1">
+                    <mxGeometry x="40" y="320" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Write sorted styles to file" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" vertex="1" collapsed="1" parent="1">
+                    <mxGeometry x="640" y="400" width="160" height="80" as="geometry">
+                        <mxRectangle x="640" y="400" width="200" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="Decided to remove the merge logic" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" vertex="1" parent="2">
+                    <mxGeometry y="80" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Y0ySicfJGBj396VjLDux-1" value="Sort generated styles" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="440" y="400" width="160" height="80" as="geometry">
+                        <mxRectangle x="440" y="400" width="200" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Y0ySicfJGBj396VjLDux-2" value="No changes, because I'm not sure how to go about it" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="Y0ySicfJGBj396VjLDux-1" vertex="1">
+                    <mxGeometry y="80" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="1nqUWfTW2K7SFlUpru6i-1" value="Generate styles based on class names" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="240" y="400" width="160" height="80" as="geometry">
+                        <mxRectangle x="240" y="400" width="480" height="400" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1nqUWfTW2K7SFlUpru6i-2" value="Part 1 - Replace all shortcuts with their rules&lt;br&gt;===&lt;br&gt;- Able to write shortcuts in shortcuts&lt;br&gt;- Layer is now assigned to each rule instead of each class name&lt;br&gt;&lt;br&gt;Part 2 - Handle variants and build the selector of each style&lt;br&gt;===&lt;br&gt;No changes&lt;br&gt;&lt;br&gt;Part 3 - Build the body of each rule&lt;br&gt;===&lt;br&gt;No changes" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="1nqUWfTW2K7SFlUpru6i-1" vertex="1">
+                    <mxGeometry y="80" width="480" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="PRLp2sKxYeASzx84mwpg-1" value="Extract class names from files" style="swimlane;whiteSpace=wrap;html=1;fontSize=18;startSize=80;" parent="1" vertex="1" collapsed="1">
+                    <mxGeometry x="40" y="400" width="160" height="80" as="geometry">
+                        <mxRectangle x="40" y="400" width="200" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PRLp2sKxYeASzx84mwpg-2" value="Refactored to make it easier to add in your own logic" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;" parent="PRLp2sKxYeASzx84mwpg-1" vertex="1">
+                    <mxGeometry y="80" width="200" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="x08ugheSv0ZatPznFa_V" name="v1">
+        <mxGraphModel dx="982" dy="602" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -187,7 +236,7 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="0h5pCzQgbhbjylbBB7HQ-1" value="&lt;div style=&quot;color: rgb(204, 204, 204); background-color: rgb(31, 31, 31); font-family: &amp;quot;Cascadia Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Generate styles based on the extracted class names&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// ===&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Each regex has implied specificity&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// The more specific regex should be placed higher on the if else if chain&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Note: strings are treated as regex by string.match()&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Need to figure out:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Shortcuts - replace the shortcut with class names in extractedClassNames beforehand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Layers - Ganerate an object to store information of the style generated&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Variants - Combinators, pseudo-classes, and pseudo-elements&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Merging? - This makes more sense with shortcuts&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Sorting the generated styles - Sort by layers first, then what?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Maybe count the number of variants in the style and sort based on that?&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Add support for Iconify&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+                <mxCell id="0h5pCzQgbhbjylbBB7HQ-1" value="&lt;div style=&quot;color: rgb(204, 204, 204); background-color: rgb(31, 31, 31); font-family: &amp;quot;Cascadia Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Generate styles based on the extracted class names&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// ===&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Each regex has implied specificity&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// The more specific regex should be placed higher on the if else if chain&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Note: strings are treated as regex by string.match()&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Need to figure out:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Shortcuts - replace the shortcut with class names in extractedClassNames beforehand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Layers - Ganerate an object to store information of the style generated&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Variants - Combinators, pseudo-classes, and pseudo-elements&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Merging? - This makes more sense with shortcuts&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Sorting the generated styles - Sort by layers first, then what?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Maybe count the number of variants in the style and sort based on that?&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955;&quot;&gt;// Add support for Iconify&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="40" y="40" width="200" height="40" as="geometry"/>
                 </mxCell>
             </root>
