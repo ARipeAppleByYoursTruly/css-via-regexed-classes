@@ -227,6 +227,10 @@ let blueprints = classNames.map((className) => {
 
 
 
+      function convertToArray(rulesAndShortcuts) {
+        return rulesAndShortcuts.replaceAll(/\s+/g, " ").trim().split(" ")
+      }
+
       function inheritVariants(ruleOrShortcut) {
         if (variants === null) {
           return ruleOrShortcut
@@ -263,10 +267,12 @@ let blueprints = classNames.map((className) => {
 
         // Optional logic here
 
-        return [
-          // your rules and shortcuts here
-          // The shortcut MUST NOT contain itself
-        ].map((ruleOrShortcut) => {
+        // The shortcut MUST NOT contain iteself
+        let rulesAndShortcuts = `
+          your rules and shortcuts here
+        `
+
+        return convertToArray(rulesAndShortcuts).map((ruleOrShortcut) => {
           checkForRecursion(ruleOrShortcut, shortcutMatch)
 
           // Optional logic here
@@ -287,11 +293,13 @@ let blueprints = classNames.map((className) => {
       if (shortcutMatch !== null) {
         usesShortcuts = true
 
-        return [
-          "color:red",
-          ":hover?color:green",
-          ":active?color:blue"
-        ].map((ruleOrShortcut) => {
+        let rulesAndShortcuts = `
+          color:red
+          :hover?color:green
+          :active?color:blue
+        `
+
+        return convertToArray(rulesAndShortcuts).map((ruleOrShortcut) => {
           checkForRecursion(ruleOrShortcut, shortcutMatch)
 
           return {
