@@ -360,32 +360,32 @@ blueprints.forEach((blueprint) => {
     while (true) {
       // Descendent combinator
       if (variants.startsWith("_")) {
-        variantRegex = /^_([^_>~+:]+)/
+        variantRegex = /^_([^_>~+:]*)/
         variantTransformation = " "
       }
       // Child combinator
       else if (variants.startsWith(">")) {
-        variantRegex = /^>([^_>~+:]+)/
+        variantRegex = /^>([^_>~+:]*)/
         variantTransformation = " > "
       }
       // General sibling combinator
       else if (variants.startsWith("~")) {
-        variantRegex = /^~([^_>~+:]+)/
+        variantRegex = /^~([^_>~+:]*)/
         variantTransformation = " ~ "
       }
       // Adjacent sibling combinator
       else if (variants.startsWith("+")) {
-        variantRegex = /^\+([^_>~+:]+)/
+        variantRegex = /^\+([^_>~+:]*)/
         variantTransformation = " + "
       }
       // Pseudo-element selector
       else if (variants.startsWith("::")) {
-        variantRegex = /^::([^_>~+:]+)/
+        variantRegex = /^::([^_>~+:]*)/
         variantTransformation = "::"
       }
       // Pseudo-class selector
       else if (variants.startsWith(":")) {
-        variantRegex = /^:([^_>~+:]+)/
+        variantRegex = /^:([^_>~+:]*)/
         variantTransformation = ":"
       }
       else {
